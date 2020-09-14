@@ -1,7 +1,7 @@
 
-FROM jenkins/jenkins:2.235.4
+FROM jenkins/jenkins:2.249.1
 
-LABEL version="2.235.4" \
+LABEL version="2.249.1" \
       maintainer="Zhong Huang"
 
 ARG user=ciwic
@@ -151,6 +151,8 @@ RUN \
 
 # Hooking a pre script to Jenkins execution
 USER root
+
+COPY jenkins.xml 
 
 RUN apt-get update
 RUN apt-get install -y apt-utils
