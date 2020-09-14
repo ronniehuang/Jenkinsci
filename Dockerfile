@@ -152,7 +152,7 @@ RUN \
 # Hooking a pre script to Jenkins execution
 USER root
 
-COPY jenkins.xml 
+ENV JAVA_OPTS="-Dhudson.model.DirectoryBrowserSupport.CSP=\"default-src 'self'; script-src 'self' https://cdn.plot.ly 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;\" ${JAVA_OPTS}"
 
 RUN apt-get update
 RUN apt-get install -y apt-utils
