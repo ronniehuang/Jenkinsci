@@ -159,5 +159,7 @@ RUN apt-get upgrade -y
 
 USER ${user}
 
+EXPOSE 8080
+EXPOSE 50000
 # For main web interface (https):
 #
