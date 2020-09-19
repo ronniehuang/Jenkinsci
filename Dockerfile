@@ -11,7 +11,7 @@ RUN \
     /usr/local/bin/install-plugins.sh \
     Office-365-Connector:4.13.0 \
     ace-editor:1.1 \
-    allure:2.28.1 \
+    allure-jenkins-plugin:2.28.1 \
     analysis-core:1.96 \
     anchore-container-scanner:1.0.22 \
     ansicolor:0.7.0 \
@@ -79,7 +79,7 @@ RUN \
     jquery-detached:1.2.1 \
     jquery-ui:1.0.2 \
     jsch:0.1.55.2 \
-    junit:1.29 \
+    junit:1.34 \
     kubernetes:1.25.7 \
     kubernetes-credentials:0.6.2 \
     ldap:1.24 \
