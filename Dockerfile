@@ -4,7 +4,7 @@ FROM jenkins/jenkins:2.249.1
 LABEL version="2.249.1" \
       maintainer="Zhong Huang"
 
-ARG user=ciwic
+ARG user=root
 
 
 RUN \
@@ -48,7 +48,7 @@ RUN \
     downstream-ext:1.8 \
     durable-task:1.34 \
     ec2:1.44.1 \
-    email-ext:2.69 \
+    email-ext:2.76 \
     embeddable-build-status:2.0.3 \
     envinject:2.3.0 \
     envinject-api:1.7 \
@@ -61,7 +61,6 @@ RUN \
     github-api:1.111 \
     github-branch-source:2.7.1 \
     github-oauth:0.33 \
-    github-organization-folder:1.6 \
     handlebars:1.1.1 \
     hashicorp-vault-plugin:3.4.1 \
     htmlpublisher:1.23 \
@@ -77,14 +76,13 @@ RUN \
     jobConfigHistory:2.26 \
     jquery:1.12.4-1 \
     jquery-detached:1.2.1 \
-    jquery-ui:1.0.2 \
     jsch:0.1.55.2 \
     junit:1.34 \
     kubernetes:1.25.7 \
     kubernetes-credentials:0.6.2 \
     ldap:1.24 \
     lockable-resources:2.8 \
-    mailer:1.32 \
+    mailer:1.32.1 \
     mapdb-api:1.0.9.0 \
     matrix-auth:2.6.2 \
     matrix-project:1.17 \
