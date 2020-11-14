@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: jenkins
+  name: jenkins
+spec:
+  containers:
+  - name: jenkins
+    image: RonnieJenkins
+    ports:
+    - containerPort: 8080
+    - containerPort: 50000
+    volumeMounts:
+      - name: jenkins-home
+        mountPath: /var/jenkins_home
+  volumes:
+    - name: jenkins-home
+      emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      name: mainport
+      targetPort: 8080
+      nodePort: 44000
+    - port: 50000
+      name: secondport
+      targetPort: 50000
+      nodePort: 44001
+  selector:
+    app: jenkins

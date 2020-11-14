@@ -1,7 +1,7 @@
 
-FROM jenkins/jenkins:2.249.1
+FROM jenkins/jenkins:2.249.3
 
-LABEL version="2.249.1" \
+LABEL version="2.249.3" \
       maintainer="Zhong Huang"
 
 ARG user=root
@@ -9,7 +9,6 @@ ARG user=root
 
 RUN \
     /usr/local/bin/install-plugins.sh \
-    Office-365-Connector:4.13.0 \
     ace-editor:1.1 \
     allure-jenkins-plugin:2.28.1 \
     analysis-core:1.96 \
@@ -47,7 +46,6 @@ RUN \
     docker-workflow:1.23 \
     downstream-ext:1.8 \
     durable-task:1.34 \
-    ec2:1.44.1 \
     email-ext:2.76 \
     embeddable-build-status:2.0.3 \
     envinject:2.3.0 \
@@ -78,7 +76,7 @@ RUN \
     jquery-detached:1.2.1 \
     jsch:0.1.55.2 \
     junit:1.34 \
-    kubernetes:1.25.7 \
+    kubernetes:1.26.4 \
     kubernetes-credentials:0.6.2 \
     ldap:1.24 \
     lockable-resources:2.8 \
